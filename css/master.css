@@ -1,0 +1,107 @@
+* {
+  margin : 0;
+  padding : 0;
+  border : 0;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  padding : 1rem;
+}
+#editor {
+  min-height: : 5rem;
+  max-height: 20rem;
+  overflow-y: scroll;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width : 20%;
+  display: flex;
+  flex-direction: column;
+  border-top : 1px solid rgba(0,0,0,0.5);
+}
+
+.sidebar a {
+  padding : 0.5rem;
+  text-decoration: none;
+  border-bottom : 1px solid rgba(0,0,0,0.5);
+  color : black;
+}
+.sidebar a:hover {
+  background-color: rgba(0,0,0,0.25);
+}
+
+.blog {
+  width : 60%;
+  display: flex;
+  flex-direction: column;
+  align-content: : center;
+  border-top: 1px solid rgba(0,0,0,0.5);
+}
+
+.full-blog-post {
+  padding : 1rem;
+}
+
+.blog-extra {
+  margin-top : 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgba(0,0,0,0.5);
+}
+
+.post {
+  width : 100%;
+  text-decoration: none;
+  border-bottom : 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.02);
+  padding : 0.5rem;
+  color : black;
+}
+
+.post:hover {
+  background-color: rgba(255,0,0,0.2);
+}
+
+.post-data {
+}
+
+.post-date{
+  color : rgba(0,0,0,0.5);
+  text-align: right;
+}
+
+/* ADD NEW POST */
+.post-content {
+  width : 100%;
+  display : flex;
+  flex-direction: row;
+}
+
+.post-title {
+  width : 70%;
+  border : 1px solid rgba(0,0,0,0.5);
+}
+
+.post-author {
+  width : 30%;
+}
+.rem2 {
+  padding : 1rem;
+}
+.save-post {
+  width: 100%;
+  padding : 1rem;
+  font-size: 1.5rem;
+}
+
+.save-post:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.25);
+}
