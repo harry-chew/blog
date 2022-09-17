@@ -90,21 +90,21 @@
             let author = postAuthor.value;
             let delta = editor.getContents();
             let data = editor.root.innerHTML;
-            SavePost(title, author, data);
+            SavePost(title, author, delta);
           }
 
-          function SavePost(title, author, data) {
-            console.log(data);
+          function SavePost(title, author, delta) {
 
             const xmlhttp = new XMLHttpRequest();
 
             xmlhttp.onload = function() {
               document.getElementById("serverResponse").innerHTML = xmlhttp.responseText;
             }
-
+            let string = JSON.stringify(delta);
+            console.log(string);
             xmlhttp.open("POST", "newpost.php");
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xmlhttp.send("t="+title+"&a="+author+"&d="+data);
+            xmlhttp.send("t="+title+"&a="+author+"&d="+string);
           }
 
         </script>
