@@ -28,7 +28,9 @@
       </div>
       <div id="post-data" class="blog rem2">
         <div class="full-blog-post">
-          <?php echo $data; ?>
+          <div id='editor'>
+            
+          </div>
           <div class="blog-extra">
             <p><?php echo $author; ?></p>
             <p><?php echo $created; ?></p>
@@ -38,7 +40,13 @@
 
       </div>
     </div>
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+  <script type="text/javascript">
 
-
+    let editor = new Quill('#editor');
+    let data = <?php echo $data;?>;
+    console.log(data);
+    editor.setContents(data);
+  </script>
   </body>
 </html>
